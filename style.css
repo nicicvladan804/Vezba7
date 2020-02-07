@@ -1,0 +1,64 @@
+body{
+    font-family: sans-serif;
+}
+#container{
+    max-width: 960px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.gallery-container{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 18px;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+#header , .text{
+    color: grey;/*privremeno*/
+}
+img{
+    width: 150px;
+}
+.picture-footer{
+    background-color: #ffffff;
+    text-align: center;
+    padding: 5px;
+    border-bottom-left-radius:5px ;
+    border-bottom-right-radius:5px ;
+}
+.picture-footer p{
+    margin: 0;
+}
+.thumb{
+    width: 150px;
+    background-color: rgb(107, 105, 243);
+    border-radius: 5px;
+    border: 1px solid rgb(164, 145, 219);
+    box-shadow:2px 2px grey ;
+
+}
+@media screen and (max-width: 1024px) {
+    .gallery-container , body {
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    font-size: 16px;
+    }
+    }
+    
+    @media screen and (max-width: 768px) {
+    .gallery-container, body {
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    font-size: 14px;
+    }
+    }
+    
+    @media screen and (max-width: 414px) {
+    .gallery-container, body{
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    font-size: 13px;
+    text-align: center;
+    }
+    }
